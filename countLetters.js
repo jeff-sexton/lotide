@@ -8,15 +8,16 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(sentence) {
-  let cleanString = sentence.split(' ').join('').toLowerCase();
-  console.log(cleanString);
+  let lowerString = sentence.toLowerCase();
   let countObject = {};
 
-  for (let letter of cleanString) {
-    if (countObject[letter]) {
-      countObject[letter] += 1;
-    } else {
-      countObject[letter] = 1;
+  for (let letter of lowerString) {
+    if (letter !== ' ') {
+      if (countObject[letter]) {
+        countObject[letter] += 1;
+      } else {
+        countObject[letter] = 1;
+      }
     }
   }
 
