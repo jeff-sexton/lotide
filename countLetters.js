@@ -1,12 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅👍 - Assertion Passed: ${actual} === ${expected} `);
-  } else {
-    console.log(`🔴(╯°□°）╯︵ ┻━┻ - Assertion Failed: ${actual} != ${expected}`);
-  }
-
-};
-
 const countLetters = function(sentence) {
   let lowerString = sentence.toLowerCase();
   let countObject = {};
@@ -25,11 +16,15 @@ const countLetters = function(sentence) {
 
 };
 
+module.exports = countLetters;
 
-assertEqual(countLetters('LHL')['l'], 2);
-assertEqual(countLetters('LHL')['h'], 1);
+// Test Code
+// const assertEqual = require('./assertEqual.js');
 
-console.log(countLetters('LHL'));
+// assertEqual(countLetters('LHL')['l'], 2);
+// assertEqual(countLetters('LHL')['h'], 1);
 
-console.log(countLetters("lighthouse in the house"));
+// console.log(countLetters('LHL'));
+
+// console.log(countLetters("lighthouse in the house"));
 
