@@ -9,10 +9,3 @@ const assertEqual = function(actual, expected) {
 
 module.exports = assertEqual;
 
-//Test Code
-
-
-// assertEqual('identical string', 'identical string');
-// assertEqual("lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
-// assertEqual(1, 2);
