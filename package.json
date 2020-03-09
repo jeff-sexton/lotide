@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@jsexton/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mini clone of lodash for practice with Lighthouse Labs bootcamp",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/jeff-sexton/lotide.git"
   },
-  "author": "",
+  "author": "Jeff Sexton",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jeff-sexton/lotide/issues"
