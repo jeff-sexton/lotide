@@ -1,34 +1,53 @@
-const assertEqual = require('../assertEqual');
 const tail = require('../tail');
 
+const assert = require('chai').assert;
 
-// Test Code:
 
-//Test Case 1
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-console.log('----\n');
+describe('#tail', () => {
+  it(`should return ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]`, () => {
+    const input = ["Hello", "Lighthouse", "Labs"];
+    const result = tail(input);
 
-//Test Case 2
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
-console.log('----\n');
+    assert.deepEqual(result, ["Lighthouse", "Labs"]);
 
-//Test Case 3
-const oneElement = ["Yo Yo"];
-console.log(tail(oneElement));
-assertEqual(tail(oneElement).length, 0);
-assertEqual(tail(oneElement)[0], undefined);
-console.log('----\n');
+  });
 
-//Test Case 4
-const empty = [];
-console.log(tail(empty));
-assertEqual(tail(empty).length, 0);
-console.log('----\n');
+  it(`should return an array with a length of 2 for ["Hello", "Lighthouse", "Labs"]`, () => {
+    const input = ["Hello", "Lighthouse", "Labs"];
+    const result = tail(input);
 
+    assert.strictEqual(result.length, 2);
+
+  });
+
+  it(`should not mutate the input array for ["Yo Yo", "Lighthouse", "Labs"]`, () => {
+    const input = ["Yo Yo", "Lighthouse", "Labs"];
+    const result = tail(input);
+
+    assert.deepEqual(input, ["Yo Yo", "Lighthouse", "Labs"]);
+
+  });
+
+  it(`should return an empty array [] for an array with only one element ["Yo Yo"]`, () => {
+    const input = ["Yo Yo"];
+    const result = tail(input);
+
+    assert.isEmpty(result);
+  });
+
+  it(`should return an empty array [] for an empty array []`, () => {
+    const input = [];
+    const result = tail(input);
+
+    assert.isEmpty(result);
+  });
+
+  it(`should return an empty array [] for input that is not an array 5`, () => {
+    const input = 5;
+    const result = tail(input);
+
+    assert.isEmpty(result);
+  });
+});
 
 
