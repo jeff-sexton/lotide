@@ -1,6 +1,6 @@
 {
   "name": "@jsexton/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mini clone of lodash for practice with Lighthouse Labs bootcamp",
   "main": "index.js",
   "directories": {
